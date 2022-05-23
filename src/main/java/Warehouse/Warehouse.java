@@ -28,8 +28,27 @@ public class Warehouse {
             balance += amountToAdd;
         } else {
             balance = capacity;
-            System.out.println((capacity-howMuchSpaceLeft())+" was thrown away.");
+            System.out.println((amountToAdd-howMuchSpaceLeft())+" was thrown away.");
         }
     }
 
+    public double takeFromWarehouse(double amountToTake){
+        double amountGot;
+        if (amountToTake < 0){
+            System.out.println("You can't take a negative amount.");
+            amountGot = 0;
+        }
+        else if (amountToTake <= balance){
+            balance -= amountToTake;
+            amountGot = amountToTake;
+        } else {
+            balance = 0;
+            amountGot = balance;
+        }
+        return amountGot;
+    }
+
+    public String toString(){
+        return "balance = "+this.getBalance()+", space left = "+howMuchSpaceLeft();
+    }
 }
