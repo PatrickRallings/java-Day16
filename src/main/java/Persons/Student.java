@@ -16,4 +16,12 @@ public class Student extends Person{
     public void study(){
         credits++;
     }
+
+    @Override
+    public String toString(){
+        return  "-----\n"+
+                "Name: " + fullName + '\n' +
+                "Address: " + address + '\n' +
+                "Credits: " + getCredits() + "\n";
+    }
 }
