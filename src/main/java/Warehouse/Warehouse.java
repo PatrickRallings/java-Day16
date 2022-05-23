@@ -26,23 +26,19 @@ public class Warehouse {
         else if (amountToAdd <= howMuchSpaceLeft()){
             balance += amountToAdd;
         } else {
-            balance = capacity;
+            balance = getCapacity();
         }
     }
 
-    public double takeFromWarehouse(double amountToTake){
-        double amountGot;
+    public void takeFromWarehouse(double amountToTake){
         if (amountToTake < 0){
-            amountGot = 0;
+            System.out.println("Amount can't be negative.");
         }
         else if (amountToTake <= balance){
             balance -= amountToTake;
-            amountGot = amountToTake;
         } else {
             balance = 0;
-            amountGot = balance;
         }
-        return amountGot;
     }
 
     public String toString(){
