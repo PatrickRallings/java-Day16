@@ -30,6 +30,10 @@ public class Main {
         persons.add(hector);
         printPersons(persons);
         //Persons and Subclasses Assignment --- End
+
+        //Warehouse Assignment --- Start
+
+        //Warehouse Assignment --- End
     }
     public static void printPersons(ArrayList<Person> persons){
         String s = "";
