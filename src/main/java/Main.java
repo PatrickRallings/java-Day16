@@ -14,6 +14,7 @@ public class Main {
         c.a();
         c.b();
         c.c();
+        System.out.println("--------------------------------------");
     //ABC Assignment --- End
 
     //Persons and Subclasses Assignment --- Start
@@ -30,6 +31,7 @@ public class Main {
         persons.add(matt);
         persons.add(hector);
         printPersons(persons);
+        System.out.println("--------------------------------------");
         //Persons and Subclasses Assignment --- End
 
         //Warehouse Assignment --- Start
@@ -37,13 +39,15 @@ public class Main {
         juice.addToWarehouse(1000.0);
         juice.takeFromWarehouse(11.3);
         System.out.println(juice.getName()); // Juice
+        juice.addToWarehouse(1.0);
         System.out.println(juice);
+        System.out.println("--------------------------------------");
         //Warehouse Assignment --- End
     }
     public static void printPersons(ArrayList<Person> persons){
-        String s = "";
+        StringBuilder s = new StringBuilder();
         for (Person person : persons){
-            s += person.toString();
+            s.append(person.toString());
         }
         System.out.println(s);
     }
