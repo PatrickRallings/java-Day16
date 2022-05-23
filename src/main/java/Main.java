@@ -2,6 +2,7 @@ import ABC.C;
 import Persons.Person;
 import Persons.Student;
 import Persons.Teacher;
+import Warehouse.ProductWarehouse;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,11 @@ public class Main {
         //Persons and Subclasses Assignment --- End
 
         //Warehouse Assignment --- Start
-
+        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+        juice.addToWarehouse(1000.0);
+        juice.takeFromWarehouse(11.3);
+        System.out.println(juice.getName()); // Juice
+        System.out.println(juice);
         //Warehouse Assignment --- End
     }
     public static void printPersons(ArrayList<Person> persons){
