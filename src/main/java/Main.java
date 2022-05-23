@@ -1,4 +1,7 @@
 import ABC.C;
+import Animals.Cat;
+import Animals.Dog;
+import Animals.NoiseCapable;
 import Herds.Herd;
 import Herds.Organism;
 import Persons.Person;
@@ -66,6 +69,16 @@ public class Main {
         herd.addToHerd(new Organism(19, 107));
         System.out.println(herd);
 //Herds Assignment --- End
+
+//Animals Assignment --- Start
+        NoiseCapable dog = new Dog();
+        dog.makeNoise();
+
+        NoiseCapable cat = new Cat("Garfield");
+        cat.makeNoise();
+        Cat c1 = (Cat) cat;
+        c1.purr();
+//Animals Assignment --- End
     }
     public static void printPersons(ArrayList<Person> persons){
         StringBuilder s = new StringBuilder();
