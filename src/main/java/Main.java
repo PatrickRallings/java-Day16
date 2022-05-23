@@ -3,6 +3,7 @@ import Persons.Person;
 import Persons.Student;
 import Persons.Teacher;
 import Warehouse.ProductWarehouse;
+import Warehouse.ProductWarehouseWithHistory;
 
 import java.util.ArrayList;
 
@@ -35,12 +36,16 @@ public class Main {
         //Persons and Subclasses Assignment --- End
 
         //Warehouse Assignment --- Start
-        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
-        juice.addToWarehouse(1000.0);
+//        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+//        juice.addToWarehouse(1000.0);
+//        juice.takeFromWarehouse(11.3);
+//        System.out.println(juice.getName()); // Juice
+//        juice.addToWarehouse(1.0);
+//        System.out.println(juice);
+        ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
         juice.takeFromWarehouse(11.3);
-        System.out.println(juice.getName()); // Juice
         juice.addToWarehouse(1.0);
-        System.out.println(juice);
+        juice.printAnalysis();
         System.out.println("--------------------------------------");
         //Warehouse Assignment --- End
     }
