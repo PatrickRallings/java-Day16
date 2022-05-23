@@ -1,4 +1,5 @@
 import ABC.C;
+import Herds.Organism;
 import Persons.Person;
 import Persons.Student;
 import Persons.Teacher;
@@ -10,15 +11,15 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
 
-    //ABC Assignment --- Start
+//ABC Assignment --- Start
         C c = new C();
         c.a();
         c.b();
         c.c();
         System.out.println("--------------------------------------");
-    //ABC Assignment --- End
+//ABC Assignment --- End
 
-    //Persons and Subclasses Assignment --- Start
+//Persons and Subclasses Assignment --- Start
         Student patrick = new Student("Patrick Rallings", "3633 Nancy Creek Rd");
         Student matt = new Student("Matt Pachapa", "123 Ansley Rd");
         Teacher hector = new Teacher("Hector Gonzalez", "123 Ansley Rd", 104);
@@ -33,9 +34,9 @@ public class Main {
         persons.add(hector);
         printPersons(persons);
         System.out.println("--------------------------------------");
-        //Persons and Subclasses Assignment --- End
+//Persons and Subclasses Assignment --- End
 
-        //Warehouse Assignment --- Start
+//Warehouse Assignment --- Start
 //        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
 //        juice.addToWarehouse(1000.0);
 //        juice.takeFromWarehouse(11.3);
@@ -47,7 +48,16 @@ public class Main {
         juice.addToWarehouse(1.0);
         juice.printAnalysis();
         System.out.println("--------------------------------------");
-        //Warehouse Assignment --- End
+//Warehouse Assignment --- End
+
+//Herds Assignment --- Start
+        Organism organism = new Organism(20, 30);
+        System.out.println(organism);
+        organism.move(-10, 5);
+        System.out.println(organism);
+        organism.move(50, 20);
+        System.out.println(organism);
+//Herds Assignment --- End
     }
     public static void printPersons(ArrayList<Person> persons){
         StringBuilder s = new StringBuilder();
