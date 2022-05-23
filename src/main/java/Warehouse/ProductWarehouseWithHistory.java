@@ -38,7 +38,13 @@ public class ProductWarehouseWithHistory extends ProductWarehouse{
     }
 
     public void printAnalysis(){
-        System.out.println(history.toString());
+        System.out.println(
+                "History: "+history.toString()+"\n"+
+                "Largest amount of product: "+history.maxValue()+"\n"+
+                "Smallest amount of product: "+history.minValue()+"\n"+
+                "Average: "+history.average()
+
+        );
     }
 
 
