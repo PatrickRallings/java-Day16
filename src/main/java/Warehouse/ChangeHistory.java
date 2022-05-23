@@ -36,7 +36,7 @@ public class ChangeHistory {
     }
 
     public String toString(){
-        String s = "History: ";
+        String s = "";
         for (Double change : changes){
             s += String.valueOf(change) + " ";
         }
