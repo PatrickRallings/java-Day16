@@ -13,6 +13,7 @@ public class ProductWarehouseWithHistory extends ProductWarehouse{
     @Override
     public void addToWarehouse(double amountToAdd){
         if (amountToAdd < 0){
+            System.out.println("Invalid number.");
         }
         else if (amountToAdd <= howMuchSpaceLeft()){
             balance += amountToAdd;
