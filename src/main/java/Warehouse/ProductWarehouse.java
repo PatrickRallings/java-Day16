@@ -11,4 +11,9 @@ public class ProductWarehouse extends Warehouse{
     public String getName(){
         return productName;
     }
+
+    @Override
+    public String toString(){
+        return getName()+": balance = "+this.getBalance()+", space left = "+howMuchSpaceLeft();
+    }
 }
