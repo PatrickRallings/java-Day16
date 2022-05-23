@@ -10,6 +10,11 @@ public class ChangeHistory {
         changes = new ArrayList<>();
     }
 
+    public ChangeHistory(double initialBalance){
+        changes = new ArrayList<>();
+        changes.add(initialBalance);
+    }
+
     public void add(double status){
         changes.add(status);
     }
@@ -31,9 +36,9 @@ public class ChangeHistory {
     }
 
     public String toString(){
-        String s = "History:\n";
+        String s = "History: ";
         for (Double change : changes){
-            s += String.valueOf(change) + "\n";
+            s += String.valueOf(change) + " ";
         }
         return s;
     }
