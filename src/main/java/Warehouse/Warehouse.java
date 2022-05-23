@@ -17,25 +17,22 @@ public class Warehouse {
     }
 
     public double howMuchSpaceLeft(){
-        return balance - capacity;
+        return capacity - balance;
     }
 
     public void addToWarehouse(double amountToAdd){
         if (amountToAdd < 0){
-            System.out.println("You can't add a negative amount.");
         }
         else if (amountToAdd <= howMuchSpaceLeft()){
             balance += amountToAdd;
         } else {
             balance = capacity;
-            System.out.println((amountToAdd-howMuchSpaceLeft())+" was thrown away.");
         }
     }
 
     public double takeFromWarehouse(double amountToTake){
         double amountGot;
         if (amountToTake < 0){
-            System.out.println("You can't take a negative amount.");
             amountGot = 0;
         }
         else if (amountToTake <= balance){
